@@ -1,0 +1,17 @@
+total 88
+drwxr-xr-x 2 root root  4096 Jul 18 09:57 .
+drwxr-xr-x 5 root root  4096 Jul 18 09:52 ..
+-rw-r--r-- 1 root root 10021 Jul 18 09:55 course-detail.html
+-rw-r--r-- 1 root root 10084 Jul 18 09:56 dashboard.html
+-rw-r--r-- 1 root root 10474 Jul 18 09:54 home.html
+-rw-r--r-- 1 root root  4707 Jul 18 09:54 index.html
+-rw-r--r-- 1 root root  8352 Jul 18 09:55 lesson.html
+-rw-r--r-- 1 root root  8416 Jul 18 09:57 profile.html
+-rw-r--r-- 1 root root  9047 Jul 18 09:53 style.css
+---
+course-detail.html: 15 links
+dashboard.html: 19 links
+home.html: 23 links
+index.html: 14 links
+lesson.html: 18 links
+profile.html: 22 links

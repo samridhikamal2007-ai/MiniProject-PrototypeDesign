@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnSphere — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Home specific */
+  .topbar { display:flex; align-items:center; justify-content:space-between; padding: 4px 20px 0; }
+  .topbar .greet-wrap { display:flex; align-items:center; gap:12px; }
+  .topbar .bell { width:42px;height:42px;border-radius:14px; background:#fff; border:1px solid var(--line); display:flex;align-items:center;justify-content:center; font-size:18px; position:relative; }
+  .topbar .bell .badge { position:absolute; top:9px; right:11px; width:8px;height:8px;border-radius:50%; background:var(--accent); border:2px solid #fff; }
+
+  .hero-card { margin: 18px 20px 0; padding: 20px; border-radius: var(--r-lg);
+    background: linear-gradient(135deg, var(--primary) 0%, #7A5BFF 100%); color:#fff; position:relative; overflow:hidden;
+    box-shadow: var(--shadow-primary); }
+  .hero-card .blob { position:absolute; width:140px;height:140px;border-radius:50%; background:rgba(255,255,255,.14); top:-50px; right:-30px; }
+  .hero-card .blob2 { position:absolute; width:90px;height:90px;border-radius:50%; background:rgba(255,255,255,.10); bottom:-30px; right:60px; }
+  .hero-card .eyebrow { font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; opacity:.85; }
+  .hero-card h2 { font-size:21px; font-weight:900; line-height:1.2; margin-top:6px; max-width:230px; letter-spacing:-.02em; }
+  .hero-card .cta { display:inline-flex; align-items:center; gap:8px; margin-top:14px; background:#fff; color:var(--primary-dark); padding:10px 18px; border-radius:99px; font-weight:700; font-size:13.5px; }
+
+  .chips { display:flex; gap:8px; overflow-x:auto; padding: 18px 20px 6px; margin:0 -20px; }
+  .chips::-webkit-scrollbar{ display:none; }
+
+  .course-grid { display:grid; grid-template-columns: 1fr 1fr; gap:14px; padding: 4px 20px; }
+  .course-card .thumb { height:108px; border-radius: 14px 14px 0 0; display:flex; align-items:flex-end; padding:10px; font-size:30px; }
+  .course-card .body { padding: 11px 12px 13px; }
+  .course-card .cat { font-size:10.5px; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:.06em; }
+  .course-card .title { font-size:13.5px; font-weight:700; margin-top:3px; line-height:1.25; min-height:34px; }
+  .course-card .meta { display:flex; align-items:center; justify-content:space-between; margin-top:9px; }
+  .course-card .price { font-size:13px; font-weight:800; color:var(--ink); }
+  .course-card .price s { color:var(--muted); font-weight:500; font-size:11px; margin-right:4px; }
+  .course-card .rating { font-size:11px; font-weight:600; color:var(--ink-2); display:flex; align-items:center; gap:3px; }
+
+  .feat-card { margin: 0 20px; }
+  .feat-card .thumb { height:120px; display:flex; align-items:center; justify-content:center; font-size:44px; position:relative; }
+  .feat-card .play { position:absolute; width:46px;height:46px;border-radius:50%; background:rgba(255,255,255,.9); display:flex;align-items:center;justify-content:center; font-size:16px; color:var(--primary); }
+  .feat-card .body { padding: 14px 16px 16px; }
+  .feat-card .tag { display:inline-block; font-size:10px; font-weight:700; color:var(--accent); background:var(--accent-soft); padding:4px 9px; border-radius:99px; }
+  .feat-card h4 { font-size:16px; font-weight:800; margin-top:8px; letter-spacing:-.02em; }
+  .feat-card .row { display:flex; align-items:center; gap:10px; margin-top:8px; font-size:12px; color:var(--muted); }
+  .feat-card .row .avatar{ width:26px;height:26px;font-size:11px; }
+  .feat-card .progress { margin-top:12px; }
+  .feat-card .progress .bar { margin-top:6px; }
+  .feat-card .progress .lab { display:flex; justify-content:space-between; font-size:11px; color:var(--muted); margin-top:5px; }
+  .feat-card .progress .lab b { color:var(--primary); }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="stage">
+
+  <div class="proto-meta">
+    <div class="brand"><span class="dot"></span> LearnSphere Prototype</div>
+    <div class="screen-tag">Screen 2 / 6 — Home / Discovery</div>
+    <div class="hint">Tap any course card →</div>
+  </div>
+
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="screen">
+      <div class="statusbar">
+        <span>9:41</span>
+        <div class="right"><div class="bars"><span></span><span></span><span></span><span></span></div><span>📶</span><span>🔋</span></div>
+      </div>
+
+      <div class="app-body">
+        <!-- Top bar -->
+        <div class="topbar">
+          <div class="greet-wrap">
+            <div class="avatar">AM</div>
+            <div>
+              <div class="sub-greet" style="font-size:12px;">Good morning 👋</div>
+              <div style="font-size:16px;font-weight:800;letter-spacing:-.02em;">Alex Morgan</div>
+            </div>
+          </div>
+          <a class="bell" href="profile.html"><span>🔔</span><span class="badge"></span></a>
+        </div>
+
+        <!-- Search -->
+        <div class="container" style="margin-top:16px;">
+          <a class="search" href="course-detail.html"><span>🔍</span> Search courses, mentors, topics…</a>
+        </div>
+
+        <!-- Continue learning hero -->
+        <a class="hero-card" href="lesson.html">
+          <span class="blob"></span><span class="blob2"></span>
+          <div class="eyebrow">Continue Learning</div>
+          <h2>UI/UX Design Masterclass — Lesson 4</h2>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:12px;">
+            <div class="bar" style="flex:1;background:rgba(255,255,255,.25);"><i style="width:65%;background:#fff;"></i></div>
+            <span style="font-size:12px;font-weight:700;">65%</span>
+          </div>
+          <span class="cta">▶ Resume lesson</span>
+        </a>
+
+        <!-- Categories -->
+        <div class="section-title"><h3>Browse categories</h3><a href="course-detail.html">All</a></div>
+        <div class="chips">
+          <span class="chip active">🔥 Trending</span>
+          <span class="chip">Design</span>
+          <span class="chip">Development</span>
+          <span class="chip">Marketing</span>
+          <span class="chip">Business</span>
+          <span class="chip">Data</span>
+        </div>
+
+        <!-- Featured / Recommended -->
+        <div class="section-title"><h3>Recommended for you</h3><a href="course-detail.html">See all</a></div>
+        <div class="course-grid">
+          <a class="card course-card" href="course-detail.html">
+            <div class="thumb" style="background:linear-gradient(135deg,#FF8A5C,#FFB199);">🎨</div>
+            <div class="body">
+              <div class="cat">Design</div>
+              <div class="title">Figma Prototyping A→Z</div>
+              <div class="meta">
+                <div class="price"><s>$49</s>$24</div>
+                <div class="rating">★ 4.9</div>
+              </div>
+            </div>
+          </a>
+          <a class="card course-card" href="course-detail.html">
+            <div class="thumb" style="background:linear-gradient(135deg,#5B5BF5,#8E8EFF);">💻</div>
+            <div class="body">
+              <div class="cat">Development</div>
+              <div class="title">React for Beginners</div>
+              <div class="meta">
+                <div class="price"><s>$59</s>$29</div>
+                <div class="rating">★ 4.8</div>
+              </div>
+            </div>
+          </a>
+          <a class="card course-card" href="course-detail.html">
+            <div class="thumb" style="background:linear-gradient(135deg,#22C55E,#86EFAC);">📈</div>
+            <div class="body">
+              <div class="cat">Marketing</div>
+              <div class="title">Digital Marketing 101</div>
+              <div class="meta">
+                <div class="price">$19</div>
+                <div class="rating">★ 4.7</div>
+              </div>
+            </div>
+          </a>
+          <a class="card course-card" href="course-detail.html">
+            <div class="thumb" style="background:linear-gradient(135deg,#0EA5E9,#7DD3FC);">📊</div>
+            <div class="body">
+              <div class="cat">Data</div>
+              <div class="title">Data Analytics with SQL</div>
+              <div class="meta">
+                <div class="price">$39</div>
+                <div class="rating">★ 4.8</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Featured large card -->
+        <div class="section-title"><h3>Top pick this week</h3></div>
+        <a class="card feat-card" href="course-detail.html">
+          <div class="thumb" style="background:linear-gradient(135deg,#15162B,#3D3DD6);">🧠<span class="play">▶</span></div>
+          <div class="body">
+            <span class="tag">⭐ Bestseller</span>
+            <h4>The Complete Product Design Bootcamp</h4>
+            <div class="row">
+              <div class="avatar">SK</div>
+              <span>Sara Khan</span><span>·</span><span>32h · 84 lessons</span>
+            </div>
+            <div class="progress">
+              <div class="bar"><i style="width:72%"></i></div>
+              <div class="lab"><span>12k enrolled</span><b>72% match</b></div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Tab bar -->
+      <nav class="tabbar">
+        <a class="active" href="home.html"><span class="ico">🏠</span>Home</a>
+        <a href="home.html"><span class="ico">🔍</span>Explore</a>
+        <a href="dashboard.html"><span class="ico">📚</span>My Learning</a>
+        <a href="profile.html"><span class="ico">👤</span>Profile</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="screen-nav">
+    <h4>Prototype screens — click to navigate</h4>
+    <div class="links">
+      <a href="index.html">1 · Onboarding</a>
+      <a class="current" href="home.html">2 · Home / Discovery</a>
+      <a href="course-detail.html">3 · Course Detail</a>
+      <a href="lesson.html">4 · Video Lesson</a>
+      <a href="dashboard.html">5 · My Learning</a>
+      <a href="profile.html">6 · Profile</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

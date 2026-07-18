@@ -1,0 +1,6 @@
+total 1524
+drwxr-xr-x 2 root root    4096 Jul 18 10:03 .
+drwxr-xr-x 5 root root    4096 Jul 18 09:52 ..
+-rw-r--r-- 1 root root 1511325 Jul 18 10:02 LearnSphere-Design-Explanation.pdf
+-rw-r--r-- 1 root root    9473 Jul 18 10:01 doc.css
+-rw-r--r-- 1 root root   25891 Jul 18 09:59 index.html

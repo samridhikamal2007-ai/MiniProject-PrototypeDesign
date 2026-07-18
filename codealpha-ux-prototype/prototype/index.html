@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnSphere — Onboarding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Onboarding specific */
+  .onb { height:100%; display:flex; flex-direction:column; background: linear-gradient(180deg,#EEEFFF 0%, #F6F7FB 38%); padding: 0 22px 28px; }
+  .onb-skip { margin-top:6px; display:flex; justify-content:flex-end; }
+  .onb-skip a { font-size:13px; font-weight:600; color:var(--muted); padding:8px 4px; }
+  .onb-hero { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:8px; }
+  .onb-illo { width: 250px; height: 250px; border-radius: 40px;
+    background: linear-gradient(150deg, var(--primary) 0%, #7A5BFF 60%, var(--accent) 120%);
+    display:flex; align-items:center; justify-content:center; box-shadow: var(--shadow-primary); position:relative; overflow:hidden; }
+  .onb-illo .glyph { font-size: 110px; }
+  .onb-illo .blob1 { position:absolute; width:120px;height:120px;border-radius:50%; background:rgba(255,255,255,.18); top:-30px; right:-20px; }
+  .onb-illo .blob2 { position:absolute; width:80px;height:80px;border-radius:50%; background:rgba(255,255,255,.12); bottom:-10px; left:-10px; }
+  .onb-dots { display:flex; gap:8px; justify-content:center; margin: 18px 0 6px; }
+  .onb-dots i { width:8px;height:8px;border-radius:50%; background:var(--line); }
+  .onb-dots i.on { width:26px; border-radius:99px; background:var(--primary); }
+  .onb h1 { font-size: 27px; font-weight: 900; letter-spacing:-.03em; line-height:1.15; margin-top: 14px; }
+  .onb h1 em { font-style:normal; color:var(--primary); }
+  .onb p { font-size: 14.5px; color: var(--ink-2); line-height:1.6; margin-top:10px; max-width: 290px; }
+  .onb-actions { display:flex; flex-direction:column; gap:12px; margin-top: 20px; }
+  .onb-divider { display:flex; align-items:center; gap:12px; color:var(--muted); font-size:12px; margin: 6px 0; }
+  .onb-divider i { flex:1; height:1px; background:var(--line); }
+  .onb-social { display:flex; gap:10px; }
+  .onb-social a { flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:13px; border:1px solid var(--line); border-radius:14px; font-weight:600; font-size:13px; background:#fff; }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="stage">
+
+  <div class="proto-meta">
+    <div class="brand"><span class="dot"></span> LearnSphere Prototype</div>
+    <div class="screen-tag">Screen 1 / 6 — Onboarding</div>
+    <div class="hint">Tap “Get Started” →</div>
+  </div>
+
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="screen">
+      <div class="statusbar">
+        <span>9:41</span>
+        <div class="right">
+          <div class="bars"><span></span><span></span><span></span><span></span></div>
+          <span>📶</span><span>🔋</span>
+        </div>
+      </div>
+
+      <div class="onb">
+        <div class="onb-skip"><a href="home.html">Skip</a></div>
+
+        <div class="onb-hero">
+          <div class="onb-illo">
+            <span class="blob1"></span><span class="blob2"></span>
+            <span class="glyph">🎓</span>
+          </div>
+          <div class="onb-dots"><i class="on"></i><i></i><i></i></div>
+          <h1>Learn <em>smarter</em>,<br>grow faster.</h1>
+          <p>Join 2M+ learners mastering in-demand skills with bite-sized, expert-led courses designed for your goals.</p>
+        </div>
+
+        <div class="onb-actions">
+          <a class="btn btn-primary btn-block" href="home.html">Get Started →</a>
+          <a class="btn btn-outline btn-block" href="home.html">I already have an account</a>
+          <div class="onb-divider"><i></i> or continue with <i></i></div>
+          <div class="onb-social">
+            <a href="home.html">🔵 Google</a>
+            <a href="home.html">🍎 Apple</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen-nav">
+    <h4>Prototype screens — click to navigate</h4>
+    <div class="links">
+      <a class="current" href="index.html">1 · Onboarding</a>
+      <a href="home.html">2 · Home / Discovery</a>
+      <a href="course-detail.html">3 · Course Detail</a>
+      <a href="lesson.html">4 · Video Lesson</a>
+      <a href="dashboard.html">5 · My Learning</a>
+      <a href="profile.html">6 · Profile</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

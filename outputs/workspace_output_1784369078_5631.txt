@@ -1,0 +1,16 @@
+=== Checking all href targets exist ===
+OK: index.html
+OK: home.html
+OK: course-detail.html
+OK: lesson.html
+OK: dashboard.html
+OK: profile.html
+OK: style.css
+
+=== Files referenced in links ===
+href="course-detail.html"
+href="dashboard.html"
+href="home.html"
+href="index.html"
+href="lesson.html"
+href="profile.html"

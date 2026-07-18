@@ -1,0 +1,6 @@
+total 20
+drwxr-xr-x 5 root root 4096 Jul 18 09:52 .
+drwxr-xr-x 7 user user 4096 Jul 18 09:52 ..
+drwxr-xr-x 2 root root 4096 Jul 18 09:52 assets
+drwxr-xr-x 2 root root 4096 Jul 18 09:52 design-explanation
+drwxr-xr-x 2 root root 4096 Jul 18 09:52 prototype

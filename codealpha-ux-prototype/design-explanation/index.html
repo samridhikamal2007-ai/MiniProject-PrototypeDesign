@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LearnSphere — Design Explanation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="doc.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- PAGE 1 — OVERVIEW, GOALS, DESIGN THINKING & RESEARCH          -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-band">
+    <div class="left">
+      <div class="logo"></div>
+      <div class="brand">LearnSphere<span>Design Explanation · CodeAlpha UI/UX Internship</span></div>
+    </div>
+    <div class="pgnum">Page 1 of 3</div>
+  </div>
+
+  <div class="cover-hero">
+    <span class="blob"></span>
+    <div class="eyebrow">Mini Project — Clickable Prototype</div>
+    <h1>LearnSphere</h1>
+    <div class="sub">A modern mobile learning platform — from design thinking to a clickable, six-screen prototype. This document explains the research, design system, user flow, and usability decisions behind the product.</div>
+    <div class="meta">
+      <div><b>Project type</b>Online Learning Platform (Mobile App)</div>
+      <div><b>Tool mindset</b>Figma / Adobe XD workflow</div>
+      <div><b>Deliverable</b>Clickable prototype + design rationale</div>
+    </div>
+  </div>
+
+  <h2>1. Project Overview</h2>
+  <p class="lead">LearnSphere is a mobile-first online learning platform concept designed to make skill-building feel approachable, motivating, and friction-free. The prototype demonstrates a complete learner journey — from first launch and course discovery, through a detailed course page and video lesson, into a personal learning dashboard and profile. Every screen is interconnected with working navigation so stakeholders can click through the experience exactly as a real user would.</p>
+  <p>The product targets self-directed learners — students, early-career professionals, and career-switchers — who want short, structured, expert-led courses they can complete on the go. Rather than replicating the dense, course-catalog feel of legacy platforms, LearnSphere prioritises a calm visual hierarchy, generous spacing, and clear primary actions so users always know what to do next.</p>
+
+  <h2>2. Problem Statement & Goals</h2>
+  <div class="grid2">
+    <div class="box">
+      <h3>The problem</h3>
+      <p>Existing learning apps overwhelm new users with huge catalogs, dense course pages, and unclear progress feedback. Learners drop off because they cannot quickly find a relevant course, do not feel a sense of momentum, and lose track of where they left off.</p>
+    </div>
+    <div class="box accent">
+      <h3>Design goals</h3>
+      <ul class="bul">
+        <li>Reduce time-to-first-course to under 60 seconds</li>
+        <li>Make progress visible and motivating on every visit</li>
+        <li>Keep course detail pages scannable, not intimidating</li>
+        <li>Support one-thumb mobile navigation throughout</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>3. Design Thinking Process</h2>
+  <p>The prototype was built following the five-stage Stanford d.school design-thinking framework, ensuring decisions were grounded in user needs rather than aesthetics alone.</p>
+  <div class="flow">
+    <span class="node">1 · Empathise</span><span class="arr">→</span>
+    <span class="node">2 · Define</span><span class="arr">→</span>
+    <span class="node">3 · Ideate</span><span class="arr">→</span>
+    <span class="node">4 · Prototype</span><span class="arr">→</span>
+    <span class="node">5 · Test</span>
+  </div>
+  <div class="grid3">
+    <div class="box"><h4>Empathise</h4><p>Researched pain points of popular apps (Udemy, Coursera) through reviews and forums: catalog overload, unclear progress, clunky video players.</p></div>
+    <div class="box"><h4>Define</h4><p>Synthesised findings into two primary personas and a core user need: “Help me find a relevant course fast and show me I'm progressing.”</p></div>
+    <div class="box"><h4>Ideate</h4><p>Sketched 6 core screens, prioritising a “continue learning” entry point and a single sticky enrol/CTA per page.</p></div>
+  </div>
+
+  <h2>4. User Research & Personas</h2>
+  <p>Two representative personas were defined to guide prioritisation. They differ in intent and commitment, which influenced the balance between discovery features and progress/motivation features in the design.</p>
+  <div class="grid2">
+    <div class="persona">
+      <div class="ph"><div class="av">AM</div><div><div class="nm">Alex Morgan — The Career Switcher</div><div class="rl">27 · Marketing grad moving into UI/UX</div></div></div>
+      <p><strong>Goal:</strong> Learn practical UI/UX skills to switch careers within 6 months.</p>
+      <p><strong>Frustration:</strong> “I find courses but lose track of progress and motivation after a week.”</p>
+      <p><strong>Needs:</strong> Clear paths, visible streaks, certificates, bite-sized lessons.</p>
+    </div>
+    <div class="persona">
+      <div class="ph"><div class="av">PR</div><div><div class="nm">Priya Rao — The Skill Upgrader</div><div class="rl">31 · Frontend dev learning React</div></div></div>
+      <p><strong>Goal:</strong> Sharpen a specific skill quickly alongside a full-time job.</p>
+      <p><strong>Frustration:</strong> “Course pages are cluttered and I can't tell if content is current.”</p>
+      <p><strong>Needs:</strong> Fast search, accurate course metadata, efficient video player.</p>
+    </div>
+  </div>
+
+  <h2>5. Competitive Scan & Key Insights</h2>
+  <p>A short competitive scan of three market leaders surfaced three recurring weaknesses that LearnSphere deliberately addresses.</p>
+  <table>
+    <tr><th>Platform</th><th>Strength</th><th>Weakness LearnSphere fixes</th></tr>
+    <tr><td>Udemy</td><td>Huge catalog, frequent discounts</td><td>Cluttered course pages → LearnSphere uses scannable tabs + single sticky CTA</td></tr>
+    <tr><td>Coursera</td><td>Accredited certificates</td><td>Heavy onboarding → LearnSphere uses a 3-step friendly intro</td></tr>
+    <tr><td>Skillshare</td><td>Bite-sized creative classes</td><td>Weak progress tracking → LearnSphere adds weekly goal ring + streaks</td></tr>
+  </table>
+
+  <div class="page-foot">
+    <span>LearnSphere · Design Explanation</span>
+    <span>CodeAlpha UI/UX Design Internship — Mini Project</span>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PAGE 2 — DESIGN SYSTEM, WIREFRAMES, USER FLOW, USABILITY      -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-band">
+    <div class="left">
+      <div class="logo"></div>
+      <div class="brand">LearnSphere<span>Design Explanation · CodeAlpha UI/UX Internship</span></div>
+    </div>
+    <div class="pgnum">Page 2 of 3</div>
+  </div>
+
+  <h2>6. Design System</h2>
+  <p>A token-based design system keeps the product visually consistent and easy to scale. Colours, typography, spacing, and components were defined once and reused across all six screens — mirroring how a Figma library with styles and components would be structured.</p>
+
+  <h3>6.1 Colour Palette</h3>
+  <p>The palette pairs a trustworthy indigo primary with a warm coral accent. Indigo conveys focus and learning; coral draws the eye to the single most important action on each screen. Neutrals carry content without competing.</p>
+  <div class="swatches">
+    <div class="swatch"><div class="chip" style="background:#5B5BF5"></div><div class="info"><b>Primary</b><span>#5B5BF5</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#3D3DD6"></div><div class="info"><b>Primary Dk</b><span>#3D3DD6</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#EEEFFF"></div><div class="info"><b>Primary Soft</b><span>#EEEFFF</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#FF8A5C"></div><div class="info"><b>Accent</b><span>#FF8A5C</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#1A1B2E"></div><div class="info"><b>Ink</b><span>#1A1B2E</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#F6F7FB"></div><div class="info"><b>Background</b><span>#F6F7FB</span></div></div>
+  </div>
+  <div class="grid3">
+    <div class="box" style="padding:9px 11px;"><h4 style="margin:0 0 3px;">Semantic</h4><p style="margin:0;font-size:10px;">Success #22C55E · Warning #F5A623 · Info #0EA5E9</p></div>
+    <div class="box" style="padding:9px 11px;"><h4 style="margin:0 0 3px;">Contrast</h4><p style="margin:0;font-size:10px;">Body text on white = 11.6:1 (AAA). Primary on white = 4.6:1 (AA).</p></div>
+    <div class="box" style="padding:9px 11px;"><h4 style="margin:0 0 3px;">Usage rule</h4><p style="margin:0;font-size:10px;">One accent per screen, reserved for the primary CTA only.</p></div>
+  </div>
+
+  <h3>6.2 Typography</h3>
+  <p>Inter was chosen for its excellent legibility on small screens and its wide weight range, which lets a single typeface handle both display headings and small UI labels — improving consistency and reducing load.</p>
+  <div>
+    <div class="type-row"><div class="demo" style="font-size:24px;font-weight:900;letter-spacing:-.03em;">Learn smarter</div><div class="meta-t"><b>Display · 24/900</b><br>Headings, hero titles</div></div>
+    <div class="type-row"><div class="demo" style="font-size:17px;font-weight:800;">Recommended for you</div><div class="meta-t"><b>Section · 17/800</b><br>Section titles</div></div>
+    <div class="type-row"><div class="demo" style="font-size:14px;font-weight:600;">Course title goes here</div><div class="meta-t"><b>Body strong · 14/600</b><br>Cards, labels</div></div>
+    <div class="type-row"><div class="demo" style="font-size:12px;font-weight:400;color:#4B4D63;">Supporting paragraph copy</div><div class="meta-t"><b>Body · 12/400</b><br>Descriptions</div></div>
+    <div class="type-row"><div class="demo" style="font-size:10px;font-weight:600;color:#8B8DA3;text-transform:uppercase;letter-spacing:.06em;">DESIGN · UPDATED</div><div class="meta-t"><b>Caption · 10/600</b><br>Tags, metadata</div></div>
+  </div>
+
+  <h3>6.3 Spacing, Radius & Components</h3>
+  <div class="grid2">
+    <div class="box">
+      <h4>Spacing scale (4pt base)</h4>
+      <p style="font-size:10.5px;margin:0;">4 · 8 · 12 · 16 · 20 · 24 · 32 — applied as consistent padding rhythm. Screen edge padding = 20px; card padding = 14–16px; section gaps = 26px.</p>
+    </div>
+    <div class="box">
+      <h4>Radius & elevation</h4>
+      <p style="font-size:10.5px;margin:0;">Radii: 10 / 16 / 22 / 30 / pill. Three shadow tiers (sm, md, lg) plus a coloured primary glow for the main CTA to signal interactivity.</p>
+    </div>
+  </div>
+  <p>Reusable components include: pill buttons (primary / accent / outline / ghost), category chips, course cards (small grid + large featured), progress bars and rings, rating stars, the bottom tab bar, and a sticky purchase/CTA bar. Building these once as variants mirrors a component library in Figma and guarantees pixel consistency.</p>
+
+  <h2>7. Information Architecture & User Flow</h2>
+  <p>The information architecture is intentionally shallow — three taps maximum to any core action — to suit mobile attention spans. The primary flow below was the spine of the prototype.</p>
+  <div class="flow">
+    <span class="node">Onboarding</span><span class="arr">→</span>
+    <span class="node">Home / Discovery</span><span class="arr">→</span>
+    <span class="node">Course Detail</span><span class="arr">→</span>
+    <span class="node">Enroll</span><span class="arr">→</span>
+    <span class="node">Video Lesson</span><span class="arr">→</span>
+    <span class="node">Mark Complete</span><span class="arr">→</span>
+    <span class="node">Dashboard</span>
+  </div>
+  <p>A persistent bottom tab bar (Home, Explore, My Learning, Profile) lets users jump between the discovery and progress halves of the app at any point, supporting both linear and exploratory navigation styles identified during research.</p>
+
+  <h2>8. Wireframes (Low-Fidelity)</h2>
+  <p>Before high-fidelity, each screen was blocked out as a grayscale wireframe to validate layout, hierarchy, and tap-target placement without the distraction of colour.</p>
+  <div class="grid3">
+    <div class="wf"><div style="font-size:8px;font-weight:700;color:#8B8DA3;margin-bottom:5px;">HOME</div>
+      <div class="wf-row"><div class="wf-box" style="height:14px;width:60%;"></div><div class="wf-box dark" style="height:14px;width:20%;margin-left:auto;border-radius:99px;"></div></div>
+      <div class="wf-box pri" style="height:48px;border-radius:8px;"></div><div class="wf-label">Hero / continue</div>
+      <div class="wf-row" style="margin-top:5px;"><div class="wf-box" style="height:10px;width:25%;border-radius:99px;"></div><div class="wf-box" style="height:10px;width:20%;border-radius:99px;"></div></div>
+      <div class="wf-row"><div class="wf-box" style="height:40px;flex:1;"></div><div class="wf-box" style="height:40px;flex:1;"></div></div>
+      <div class="wf-row"><div class="wf-box" style="height:40px;flex:1;"></div><div class="wf-box" style="height:40px;flex:1;"></div></div>
+    </div>
+    <div class="wf"><div style="font-size:8px;font-weight:700;color:#8B8DA3;margin-bottom:5px;">COURSE DETAIL</div>
+      <div class="wf-box acc" style="height:60px;border-radius:8px;"></div><div class="wf-label">Video preview</div>
+      <div class="wf-box" style="height:8px;width:80%;margin-top:6px;"></div>
+      <div class="wf-box" style="height:8px;width:60%;margin:3px 0 6px;"></div>
+      <div class="wf-box" style="height:30px;border-radius:6px;"></div><div class="wf-label">Instructor</div>
+      <div class="wf-box" style="height:6px;margin-top:5px;"></div>
+      <div class="wf-box" style="height:6px;width:70%;margin:3px 0;"></div>
+      <div class="wf-box pri" style="height:14px;border-radius:99px;margin-top:4px;"></div><div class="wf-label">Sticky CTA</div>
+    </div>
+    <div class="wf"><div style="font-size:8px;font-weight:700;color:#8B8DA3;margin-bottom:5px;">LESSON PLAYER</div>
+      <div class="wf-box dark" style="height:55px;border-radius:8px;"></div><div class="wf-label">Video stage</div>
+      <div class="wf-box" style="height:8px;width:85%;margin-top:6px;"></div>
+      <div class="wf-row" style="margin-top:5px;"><div class="wf-box" style="height:24px;flex:1;"></div><div class="wf-box" style="height:24px;flex:1;"></div><div class="wf-box" style="height:24px;flex:1;"></div></div>
+      <div class="wf-box" style="height:22px;margin-top:5px;"></div>
+      <div class="wf-box" style="height:22px;margin-top:4px;"></div>
+      <div class="wf-box pri" style="height:14px;border-radius:99px;margin-top:5px;"></div>
+    </div>
+  </div>
+
+  <h2>9. Usability Principles Applied</h2>
+  <div class="grid2">
+    <div class="box primary"><h4>Jakob's Law — familiarity</h4><p style="margin:0;">Bottom tab bar, search position, and progress patterns match conventions users already know, lowering the learning curve.</p></div>
+    <div class="box primary"><h4>Hick's Law — fewer choices</h4><p style="margin:0;">Category chips are horizontally scrollable but only one row; each screen surfaces a single primary action to reduce decision load.</p></div>
+    <div class="box primary"><h4>Fitts's Law — thumb reach</h4><p style="margin:0;">Primary CTAs sit in the bottom sticky bar within the thumb zone; tap targets meet the 44pt minimum throughout.</p></div>
+    <div class="box primary"><h4>Visibility of progress</h4><p style="margin:0;">A weekly-goal ring, per-course bars, streaks, and badges keep momentum visible — directly addressing the #1 research pain point.</p></div>
+  </div>
+
+  <div class="page-foot">
+    <span>LearnSphere · Design Explanation</span>
+    <span>Page 2 — Design System & Usability</span>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PAGE 3 — PROTOTYPE WALKTHROUGH, TESTING, CONCLUSION            -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-band">
+    <div class="left">
+      <div class="logo"></div>
+      <div class="brand">LearnSphere<span>Design Explanation · CodeAlpha UI/UX Internship</span></div>
+    </div>
+    <div class="pgnum">Page 3 of 3</div>
+  </div>
+
+  <h2>10. Prototype Walkthrough</h2>
+  <p>The clickable prototype comprises six interconnected mobile screens. Each card below summarises the screen's purpose and the key design decisions behind it. In the live prototype, every highlighted element navigates to the next logical screen, reproducing a real user journey.</p>
+
+  <div class="thumbs">
+    <div class="thumb-card">
+      <div class="mini-phone mp-onb">
+        <div class="mp-top"><span>9:41</span><span>📶 🔋</span></div>
+        <div class="mp-hero"></div>
+        <div class="mp-line" style="width:60%;"></div>
+        <div class="mp-line" style="width:40%;"></div>
+        <div class="mp-box pri" style="height:14px;border-radius:99px;margin:6px 12px;"></div>
+        <div class="mp-box" style="height:12px;border-radius:99px;margin:4px 12px;background:#fff;border:1px solid #E2E5F0;"></div>
+      </div>
+      <div class="cap">1 · Onboarding</div>
+    </div>
+    <div class="thumb-card">
+      <div class="mini-phone mp-home">
+        <div class="mp-top"><span>9:41</span><span>📶 🔋</span></div>
+        <div class="mp-box pri" style="height:34px;margin:0 6px 6px;border-radius:8px;"></div>
+        <div class="mp-card"><div class="mp-box"></div><div class="mp-box"></div></div>
+        <div class="mp-card" style="margin-top:5px;"><div class="mp-box"></div><div class="mp-box"></div></div>
+        <div class="mp-tab"><span>Home</span><span>Search</span><span>Learn</span><span>You</span></div>
+      </div>
+      <div class="cap">2 · Home / Discovery</div>
+    </div>
+    <div class="thumb-card">
+      <div class="mini-phone mp-detail">
+        <div class="mp-top"><span>9:41</span><span>📶 🔋</span></div>
+        <div class="mp-vid"></div>
+        <div class="mp-box" style="height:7px;width:80%;margin:0 6px 3px;"></div>
+        <div class="mp-box" style="height:7px;width:55%;margin:0 6px 6px;"></div>
+        <div class="mp-box" style="height:22px;margin:0 6px 4px;"></div>
+        <div class="mp-box pri" style="height:12px;border-radius:99px;margin:6px 6px 0;"></div>
+      </div>
+      <div class="cap">3 · Course Detail</div>
+    </div>
+    <div class="thumb-card">
+      <div class="mini-phone mp-lesson">
+        <div class="mp-top" style="color:#fff;"><span>9:41</span><span>📶 🔋</span></div>
+        <div class="mp-vid"></div>
+        <div class="mp-box" style="height:7px;width:85%;margin:0 6px 4px;"></div>
+        <div class="mp-row" style="display:flex;gap:4px;padding:0 6px;"><div class="mp-box" style="height:18px;flex:1;"></div><div class="mp-box" style="height:18px;flex:1;"></div><div class="mp-box" style="height:18px;flex:1;"></div></div>
+        <div class="mp-box pri" style="height:12px;border-radius:99px;margin:6px 6px 0;"></div>
+      </div>
+      <div class="cap">4 · Video Lesson</div>
+    </div>
+    <div class="thumb-card">
+      <div class="mini-phone mp-dash">
+        <div class="mp-top"><span>9:41</span><span>📶 🔋</span></div>
+        <div class="mp-box" style="height:14px;width:50%;margin:0 6px 5px;"></div>
+        <div class="mp-box dark" style="height:34px;margin:0 6px 6px;border-radius:8px;display:flex;align-items:center;">
+          <div class="mp-ring" style="margin:0 8px;"><i>72%</i></div>
+          <div style="flex:1;"><div class="mp-box" style="height:6px;width:70%;background:rgba(255,255,255,.3);"></div></div>
+        </div>
+        <div class="mp-box" style="height:20px;margin:0 6px 4px;"></div>
+        <div class="mp-box" style="height:20px;margin:0 6px 4px;"></div>
+        <div class="mp-tab"><span>Home</span><span>Search</span><span>Learn</span><span>You</span></div>
+      </div>
+      <div class="cap">5 · My Learning</div>
+    </div>
+    <div class="thumb-card">
+      <div class="mini-phone mp-profile">
+        <div class="mp-cover"></div>
+        <div class="mp-av"></div>
+        <div class="mp-box" style="height:7px;width:50%;margin:0 auto 4px;"></div>
+        <div class="mp-box" style="height:7px;width:35%;margin:0 auto 6px;"></div>
+        <div class="mp-box" style="height:24px;margin:0 6px 4px;"></div>
+        <div class="mp-box" style="height:24px;margin:0 6px 4px;"></div>
+        <div class="mp-tab"><span>Home</span><span>Search</span><span>Learn</span><span>You</span></div>
+      </div>
+      <div class="cap">6 · Profile</div>
+    </div>
+  </div>
+
+  <h3>Screen-by-screen rationale</h3>
+  <ul class="bul">
+    <li><strong>Onboarding</strong> — A single hero illustration, a three-dot progress indicator, and a clearly labelled primary CTA. “Skip” respects users who want to browse before committing.</li>
+    <li><strong>Home / Discovery</strong> — Opens with a personalised “Continue Learning” hero so returning users resume in one tap. Category chips and a 2-up course grid support fast scanning; a featured card surfaces a top pick.</li>
+    <li><strong>Course Detail</strong> — A gradient video-preview header, scannable tabs (Overview / Curriculum / Reviews), an instructor card for trust, and a sticky bottom bar carrying price + enrol so the CTA never scrolls out of reach.</li>
+    <li><strong>Video Lesson</strong> — Dark video stage for focus, inline timeline and speed control, contextual actions (helpful / notes / discuss), a pro-tip callout, and an “Up Next” list to reduce drop-off between lessons.</li>
+    <li><strong>My Learning Dashboard</strong> — At-a-glance stats, a weekly-goal ring, in-progress courses with progress bars, a 7-day activity chart, and achievement badges — all engineered to sustain motivation.</li>
+    <li><strong>Profile</strong> — Cover + avatar identity, certificate downloads (a key motivator for career-switchers), and grouped settings menus following iOS/Android conventions for instant familiarity.</li>
+  </ul>
+
+  <h2>11. Usability Testing Plan</h2>
+  <p>Because this is a concept prototype, a lightweight moderated testing plan was prepared to validate the design before development. Five participants matching the two personas would complete three core tasks while thinking aloud.</p>
+  <table>
+    <tr><th>#</th><th>Task</th><th>Success metric</th><th>What we'd learn</th></tr>
+    <tr><td>1</td><td>Find and open a Design course</td><td>≤ 30s, no back-tracking</td><td>Discovery clarity, chip usability</td></tr>
+    <tr><td>2</td><td>Enrol and start the first lesson</td><td>Completes flow, notices CTA</td><td>Sticky CTA effectiveness</td></tr>
+    <tr><td>3</td><td>Return to an in-progress course</td><td>Uses dashboard in ≤ 2 taps</td><td>Resume path & progress visibility</td></tr>
+  </table>
+  <p>Metrics captured: task success rate, time-on-task, number of taps, and System Usability Scale (SUS) questionnaire. Predicted issues to watch: category chip discoverability on small screens and whether the weekly-goal ring reads as motivating versus pressuring.</p>
+
+  <h2>12. Accessibility Considerations</h2>
+  <div class="grid2">
+    <div class="box"><ul class="bul" style="margin:0;">
+      <li>Body text meets WCAG AA contrast (ink on white ≈ 11.6:1)</li>
+      <li>All interactive elements ≥ 44×44 pt tap targets</li>
+      <li>Colour is never the sole indicator (icons + labels accompany states)</li>
+    </ul></div>
+    <div class="box"><ul class="bul" style="margin:0;">
+      <li>Focus order follows visual order; semantic headings structure content</li>
+      <li>Respect for motion: transitions are short and could be disabled</li>
+      <li>Dynamic Type-friendly sizing using relative units</li>
+    </ul></div>
+  </div>
+
+  <h2>13. Conclusion & Next Steps</h2>
+  <p>The LearnSphere prototype demonstrates a complete, research-backed user journey for an online learning platform, built with a consistent design system and grounded in recognised usability principles. The clickable prototype lets stakeholders experience the flow end-to-end — from onboarding through to a certificate-ready profile — while this document makes the reasoning behind each decision transparent.</p>
+  <div class="box accent">
+    <h4 style="margin-top:0;">Recommended next steps</h4>
+    <ul class="bul" style="margin:0;">
+      <li>Run the 5-participant moderated test and iterate on chip discoverability</li>
+      <li>Add dark-mode tokens and empty/loading/error states to the system</li>
+      <li>Expand to a responsive web companion reusing the same component library</li>
+      <li>Introduce micro-interactions (button press, lesson-complete celebration) for delight</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+  <p style="font-size:10.5px;color:var(--muted);"><strong style="color:var(--ink);">Prototype link:</strong> hosted interactive prototype (six clickable screens) — see attached deliverable. <strong style="color:var(--ink);">Tools/methodology:</strong> design-thinking framework, Figma/Adobe XD-style component workflow, HTML/CSS high-fidelity prototype for clickable testing. <strong style="color:var(--ink);">Prepared for:</strong> CodeAlpha UI/UX Design Internship — Mini Project (Prototype Design).</p>
+
+  <div class="page-foot">
+    <span>LearnSphere · Design Explanation</span>
+    <span>Page 3 — Prototype, Testing & Conclusion</span>
+  </div>
+</section>
+
+</body>
+</html>

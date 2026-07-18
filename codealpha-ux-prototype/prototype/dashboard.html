@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnSphere — My Learning Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .db-header { padding: 4px 20px 0; display:flex; align-items:center; justify-content:space-between; }
+  .db-header h1 { font-size:22px; font-weight:900; letter-spacing:-.02em; }
+  .db-header .ico-btn { width:40px;height:40px;border-radius:12px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:17px; }
+
+  /* Stats row */
+  .db-stats { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; padding: 16px 20px 4px; }
+  .db-stat { background:#fff; border:1px solid var(--line); border-radius:var(--r-md); padding:13px 12px; text-align:center; }
+  .db-stat .v { font-size:19px; font-weight:900; letter-spacing:-.02em; }
+  .db-stat .l { font-size:10.5px; color:var(--muted); font-weight:600; margin-top:3px; }
+  .db-stat .e { font-size:18px; margin-bottom:3px; }
+
+  /* Weekly goal ring card */
+  .db-goal { margin: 16px 20px 0; padding:18px; border-radius:var(--r-lg); background:linear-gradient(135deg,#15162B,#3D3DD6); color:#fff; display:flex; align-items:center; gap:18px; position:relative; overflow:hidden; }
+  .db-goal .ring { width:74px;height:74px;border-radius:50%; flex-shrink:0; background: conic-gradient(var(--accent) 0% 72%, rgba(255,255,255,.18) 72% 100%); display:flex;align-items:center;justify-content:center; }
+  .db-goal .ring i { width:54px;height:54px;border-radius:50%; background:#252647; display:flex;align-items:center;justify-content:center; font-weight:900; font-size:17px; }
+  .db-goal .t { font-size:15px; font-weight:800; }
+  .db-goal .s { font-size:12px; opacity:.8; margin-top:3px; }
+  .db-goal .blob { position:absolute; width:120px;height:120px;border-radius:50%; background:rgba(255,255,255,.07); top:-40px; right:-30px; }
+
+  /* In progress course list */
+  .db-course { display:flex; gap:13px; padding:14px; background:#fff; border:1px solid var(--line); border-radius:var(--r-md); margin: 0 20px 12px; }
+  .db-course .thumb { width:64px;height:64px;border-radius:14px; display:flex;align-items:center;justify-content:center; font-size:26px; flex-shrink:0; }
+  .db-course .info { flex:1; min-width:0; }
+  .db-course .cat { font-size:10.5px; font-weight:700; color:var(--primary); text-transform:uppercase; }
+  .db-course .ttl { font-size:13.5px; font-weight:700; line-height:1.25; margin:2px 0 8px; }
+  .db-course .pr { display:flex; justify-content:space-between; font-size:11px; color:var(--muted); margin-bottom:5px; font-weight:600; }
+  .db-course .pr b { color:var(--ink); }
+  .db-course .play { width:38px;height:38px;border-radius:12px; background:var(--primary-soft); color:var(--primary); display:flex;align-items:center;justify-content:center; font-size:14px; align-self:center; flex-shrink:0; }
+
+  /* Achievements */
+  .db-ach { display:flex; gap:12px; overflow-x:auto; padding: 4px 20px 6px; margin:0 -20px; }
+  .db-ach::-webkit-scrollbar{ display:none; }
+  .db-ach .a { flex-shrink:0; width:108px; background:#fff; border:1px solid var(--line); border-radius:var(--r-md); padding:14px 10px; text-align:center; }
+  .db-ach .a .em { font-size:26px; }
+  .db-ach .a .nm { font-size:11px; font-weight:700; margin-top:6px; line-height:1.25; }
+  .db-ach .a .dt { font-size:9.5px; color:var(--muted); margin-top:3px; }
+  .db-ach .a.locked { opacity:.45; }
+
+  /* Activity chart (simple bars) */
+  .db-chart { margin: 0 20px; background:#fff; border:1px solid var(--line); border-radius:var(--r-md); padding:16px; }
+  .db-chart .h { display:flex; justify-content:space-between; align-items:center; }
+  .db-chart .h .t { font-size:14px; font-weight:800; }
+  .db-chart .h .v { font-size:12px; color:var(--primary); font-weight:700; }
+  .db-chart .bars { display:flex; align-items:flex-end; gap:8px; height:90px; margin-top:14px; }
+  .db-chart .bars .b { flex:1; background:var(--primary-soft); border-radius:6px 6px 0 0; position:relative; }
+  .db-chart .bars .b i { display:block; width:100%; background:var(--primary); border-radius:6px 6px 0 0; }
+  .db-chart .lbl { display:flex; justify-content:space-between; font-size:10px; color:var(--muted); margin-top:8px; font-weight:600; }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="stage">
+  <div class="proto-meta">
+    <div class="brand"><span class="dot"></span> LearnSphere Prototype</div>
+    <div class="screen-tag">Screen 5 / 6 — My Learning</div>
+    <div class="hint">Tap a course → resume lesson</div>
+  </div>
+
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="screen">
+      <div class="statusbar"><span>9:41</span>
+        <div class="right"><div class="bars"><span></span><span></span><span></span><span></span></div><span>📶</span><span>🔋</span></div>
+      </div>
+
+      <div class="app-body">
+        <div class="db-header">
+          <h1>My Learning</h1>
+          <a class="ico-btn" href="profile.html">⚙️</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="db-stats">
+          <div class="db-stat"><div class="e">⏱</div><div class="v">48h</div><div class="l">Learned</div></div>
+          <div class="db-stat"><div class="e">📚</div><div class="v">7</div><div class="l">Courses</div></div>
+          <div class="db-stat"><div class="e">🏆</div><div class="v">12</div><div class="l">Badges</div></div>
+        </div>
+
+        <!-- Weekly goal -->
+        <div class="db-goal">
+          <span class="blob"></span>
+          <div class="ring"><i>72%</i></div>
+          <div>
+            <div class="t">Weekly Goal</div>
+            <div class="s">3.6h of 5h this week — keep it up! 🔥</div>
+          </div>
+        </div>
+
+        <!-- In progress -->
+        <div class="section-title"><h3>Continue learning</h3><a href="home.html">Browse</a></div>
+
+        <a class="db-course" href="lesson.html">
+          <div class="thumb" style="background:linear-gradient(135deg,#5B5BF5,#8E8EFF);">🎨</div>
+          <div class="info">
+            <div class="cat">Design</div>
+            <div class="ttl">Figma Prototyping A→Z</div>
+            <div class="pr"><span>Module 4 · Lesson 4</span><b>65%</b></div>
+            <div class="bar"><i style="width:65%"></i></div>
+          </div>
+          <span class="play">▶</span>
+        </a>
+
+        <a class="db-course" href="lesson.html">
+          <div class="thumb" style="background:linear-gradient(135deg,#FF8A5C,#FFB199);">💻</div>
+          <div class="info">
+            <div class="cat">Development</div>
+            <div class="ttl">React for Beginners</div>
+            <div class="pr"><span>Module 2 · Lesson 3</span><b>38%</b></div>
+            <div class="bar"><i style="width:38%;background:var(--accent)"></i></div>
+          </div>
+          <span class="play">▶</span>
+        </a>
+
+        <a class="db-course" href="lesson.html">
+          <div class="thumb" style="background:linear-gradient(135deg,#22C55E,#86EFAC);">📈</div>
+          <div class="info">
+            <div class="cat">Marketing</div>
+            <div class="ttl">Digital Marketing 101</div>
+            <div class="pr"><span>Module 5 · Lesson 2</span><b>84%</b></div>
+            <div class="bar"><i style="width:84%;background:var(--success)"></i></div>
+          </div>
+          <span class="play">▶</span>
+        </a>
+
+        <!-- Weekly activity chart -->
+        <div class="section-title"><h3>This week's activity</h3></div>
+        <div class="db-chart">
+          <div class="h"><span class="t">Learning hours</span><span class="v">+18% vs last week</span></div>
+          <div class="bars">
+            <div class="b"><i style="height:40%"></i></div>
+            <div class="b"><i style="height:65%"></i></div>
+            <div class="b"><i style="height:30%"></i></div>
+            <div class="b"><i style="height:80%"></i></div>
+            <div class="b"><i style="height:55%"></i></div>
+            <div class="b"><i style="height:95%;background:var(--accent)"></i></div>
+            <div class="b"><i style="height:20%"></i></div>
+          </div>
+          <div class="lbl"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="section-title"><h3>Achievements</h3><a href="profile.html">All</a></div>
+        <div class="db-ach">
+          <div class="a"><div class="em">🔥</div><div class="nm">7-Day Streak</div><div class="dt">Earned today</div></div>
+          <div class="a"><div class="em">⚡</div><div class="nm">Fast Learner</div><div class="dt">2 days ago</div></div>
+          <div class="a"><div class="em">🎯</div><div class="nm">Goal Crusher</div><div class="dt">Last week</div></div>
+          <div class="a locked"><div class="em">💎</div><div class="nm">100h Club</div><div class="dt">52h to go</div></div>
+        </div>
+      </div>
+
+      <nav class="tabbar">
+        <a href="home.html"><span class="ico">🏠</span>Home</a>
+        <a href="home.html"><span class="ico">🔍</span>Explore</a>
+        <a class="active" href="dashboard.html"><span class="ico">📚</span>My Learning</a>
+        <a href="profile.html"><span class="ico">👤</span>Profile</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="screen-nav">
+    <h4>Prototype screens — click to navigate</h4>
+    <div class="links">
+      <a href="index.html">1 · Onboarding</a>
+      <a href="home.html">2 · Home / Discovery</a>
+      <a href="course-detail.html">3 · Course Detail</a>
+      <a href="lesson.html">4 · Video Lesson</a>
+      <a class="current" href="dashboard.html">5 · My Learning</a>
+      <a href="profile.html">6 · Profile</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

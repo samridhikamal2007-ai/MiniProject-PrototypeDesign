@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnSphere — Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .pf-cover { height: 130px; background: linear-gradient(135deg,var(--primary),#7A5BFF); position:relative; }
+  .pf-cover .topnav { display:flex; justify-content:space-between; padding: 6px 20px 0; }
+  .pf-cover .topnav a { width:38px;height:38px;border-radius:11px; background:rgba(255,255,255,.18); color:#fff; display:flex;align-items:center;justify-content:center; font-size:16px; backdrop-filter:blur(4px); }
+  .pf-cover .blob { position:absolute; width:160px;height:160px;border-radius:50%; background:rgba(255,255,255,.10); top:-60px; right:-40px; }
+
+  .pf-head { margin-top:-46px; text-align:center; position:relative; z-index:5; padding: 0 20px; }
+  .pf-head .av { width:88px;height:88px;border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--accent)); color:#fff; display:flex;align-items:center;justify-content:center; font-weight:900; font-size:30px; margin: 0 auto; border:4px solid #fff; box-shadow:var(--shadow-md); }
+  .pf-head .nm { font-size:20px; font-weight:900; letter-spacing:-.02em; margin-top:10px; }
+  .pf-head .em { font-size:13px; color:var(--muted); }
+  .pf-head .tags { display:flex; gap:8px; justify-content:center; margin-top:10px; }
+  .pf-head .tags span { font-size:11px; font-weight:700; padding:5px 12px; border-radius:99px; background:var(--primary-soft); color:var(--primary-dark); }
+
+  .pf-stats { display:flex; justify-content:space-around; margin: 18px 20px 0; padding: 16px 0; background:#fff; border:1px solid var(--line); border-radius:var(--r-lg); }
+  .pf-stats .s { text-align:center; }
+  .pf-stats .v { font-size:18px; font-weight:900; }
+  .pf-stats .l { font-size:11px; color:var(--muted); font-weight:600; margin-top:2px; }
+
+  .pf-section { margin: 22px 20px 0; }
+  .pf-section h4 { font-size:12px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); font-weight:700; margin-bottom:10px; }
+  .pf-menu { background:#fff; border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; }
+  .pf-menu a { display:flex; align-items:center; gap:14px; padding:15px 16px; border-bottom:1px solid var(--line); font-size:14px; font-weight:600; color:var(--ink); }
+  .pf-menu a:last-child { border-bottom:none; }
+  .pf-menu a .ico-circle { width:36px;height:36px;border-radius:10px; font-size:17px; }
+  .pf-menu a .arr { margin-left:auto; color:var(--muted); font-size:15px; }
+  .pf-menu a .val { margin-left:auto; font-size:12px; color:var(--muted); font-weight:600; }
+
+  .pf-cert { display:flex; gap:13px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:var(--r-md); padding:14px; margin-bottom:10px; }
+  .pf-cert .seal { width:54px;height:54px;border-radius:14px; background:linear-gradient(135deg,#22C55E,#86EFAC); display:flex;align-items:center;justify-content:center; font-size:24px; flex-shrink:0; }
+  .pf-cert .t { font-size:13.5px; font-weight:700; line-height:1.3; }
+  .pf-cert .d { font-size:11px; color:var(--muted); margin-top:3px; }
+  .pf-cert .dl { margin-left:auto; font-size:18px; color:var(--primary); }
+
+  .pf-logout { margin: 24px 20px 8px; text-align:center; padding:15px; border:1px solid #FECACA; border-radius:var(--r-pill); color:#DC2626; font-weight:700; font-size:14px; }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="stage">
+  <div class="proto-meta">
+    <div class="brand"><span class="dot"></span> LearnSphere Prototype</div>
+    <div class="screen-tag">Screen 6 / 6 — Profile / Settings</div>
+    <div class="hint">End of flow — back to Onboarding</div>
+  </div>
+
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="screen">
+      <div class="statusbar" style="color:#fff;"><span>9:41</span>
+        <div class="right" style="color:#fff;"><div class="bars"><span style="background:#fff;"></span><span style="background:#fff;"></span><span style="background:#fff;"></span><span style="background:#fff;"></span></div><span>📶</span><span>🔋</span></div>
+      </div>
+
+      <div class="app-body" style="padding-bottom:100px;">
+        <div class="pf-cover">
+          <span class="blob"></span>
+          <div class="topnav"><a href="dashboard.html">‹</a><a href="profile.html">✏️</a></div>
+        </div>
+
+        <div class="pf-head">
+          <div class="av">AM</div>
+          <div class="nm">Alex Morgan</div>
+          <div class="em">alex.morgan@email.com</div>
+          <div class="tags"><span>UI/UX Learner</span><span>Level 7</span></div>
+        </div>
+
+        <div class="pf-stats">
+          <div class="s"><div class="v">7</div><div class="l">Courses</div></div>
+          <div class="s"><div class="v">48h</div><div class="l">Learned</div></div>
+          <div class="s"><div class="v">12</div><div class="l">Badges</div></div>
+          <div class="s"><div class="v">3</div><div class="l">Certs</div></div>
+        </div>
+
+        <!-- Certificates -->
+        <div class="pf-section">
+          <h4>My certificates</h4>
+          <div class="pf-cert">
+            <div class="seal">🏅</div>
+            <div><div class="t">UI/UX Design Foundations</div><div class="d">Issued May 2025 · Sara Khan</div></div>
+            <span class="dl">⬇</span>
+          </div>
+          <div class="pf-cert">
+            <div class="seal" style="background:linear-gradient(135deg,#5B5BF5,#8E8EFF);">📜</div>
+            <div><div class="t">Figma Prototyping Basics</div><div class="d">Issued Jun 2025</div></div>
+            <span class="dl">⬇</span>
+          </div>
+        </div>
+
+        <!-- Settings menu -->
+        <div class="pf-section">
+          <h4>Account</h4>
+          <div class="pf-menu">
+            <a href="profile.html"><span class="ico-circle" style="background:var(--primary-soft);color:var(--primary);">👤</span> Personal info <span class="arr">›</span></a>
+            <a href="profile.html"><span class="ico-circle" style="background:var(--accent-soft);color:var(--accent);">🔔</span> Notifications <span class="val">On</span></a>
+            <a href="profile.html"><span class="ico-circle" style="background:#E0F2FE;color:#0EA5E9;">🔒</span> Privacy & security <span class="arr">›</span></a>
+            <a href="profile.html"><span class="ico-circle" style="background:#DCFCE7;color:#22C55E;">💳</span> Billing & plans <span class="val">Pro</span></a>
+          </div>
+        </div>
+
+        <div class="pf-section">
+          <h4>Support</h4>
+          <div class="pf-menu">
+            <a href="profile.html"><span class="ico-circle" style="background:#FEF3C7;color:#F5A623;">❓</span> Help center <span class="arr">›</span></a>
+            <a href="profile.html"><span class="ico-circle" style="background:#F3E8FF;color:#7C3AED;">⭐</span> Rate LearnSphere <span class="arr">›</span></a>
+            <a href="profile.html"><span class="ico-circle" style="background:#FCE7F3;color:#EC4899;">ℹ️</span> About <span class="arr">›</span></a>
+          </div>
+        </div>
+
+        <a class="pf-logout" href="index.html">Log out</a>
+        <div style="text-align:center;font-size:11px;color:var(--muted);">LearnSphere v2.4.0 · Made with 💜</div>
+      </div>
+
+      <nav class="tabbar">
+        <a href="home.html"><span class="ico">🏠</span>Home</a>
+        <a href="home.html"><span class="ico">🔍</span>Explore</a>
+        <a href="dashboard.html"><span class="ico">📚</span>My Learning</a>
+        <a class="active" href="profile.html"><span class="ico">👤</span>Profile</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="screen-nav">
+    <h4>Prototype screens — click to navigate</h4>
+    <div class="links">
+      <a href="index.html">1 · Onboarding</a>
+      <a href="home.html">2 · Home / Discovery</a>
+      <a href="course-detail.html">3 · Course Detail</a>
+      <a href="lesson.html">4 · Video Lesson</a>
+      <a href="dashboard.html">5 · My Learning</a>
+      <a class="current" href="profile.html">6 · Profile</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

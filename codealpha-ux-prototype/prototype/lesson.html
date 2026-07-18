@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnSphere — Video Lesson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .vid-stage { position:relative; height: 230px; background: linear-gradient(135deg,#15162B,#3D3DD6); display:flex; align-items:center; justify-content:center; }
+  .vid-stage .play { width:64px;height:64px;border-radius:50%; background:rgba(255,255,255,.92); display:flex;align-items:center;justify-content:center; font-size:24px; color:var(--primary); box-shadow:var(--shadow-lg); }
+  .vid-topnav { position:absolute; top:6px; left:0; right:0; display:flex; justify-content:space-between; padding: 0 20px; }
+  .vid-topnav a { width:40px;height:40px;border-radius:12px; background:rgba(255,255,255,.15); color:#fff; display:flex;align-items:center;justify-content:center; font-size:18px; backdrop-filter:blur(4px); }
+  .vid-controls { position:absolute; bottom:10px; left:0; right:0; padding: 0 18px; color:#fff; }
+  .vid-controls .timeline { height:4px; background:rgba(255,255,255,.3); border-radius:99px; overflow:hidden; }
+  .vid-controls .timeline i { display:block; width:35%; height:100%; background:#fff; border-radius:99px; }
+  .vid-controls .time { display:flex; justify-content:space-between; font-size:11px; font-weight:600; margin-top:6px; opacity:.9; }
+  .vid-controls .btns { display:flex; align-items:center; justify-content:center; gap:24px; margin-top:8px; font-size:22px; }
+
+  .vid-body { padding: 18px 20px 100px; }
+  .vid-title { font-size:18px; font-weight:800; letter-spacing:-.02em; line-height:1.25; }
+  .vid-sub { font-size:12.5px; color:var(--muted); margin-top:6px; display:flex; align-items:center; gap:10px; }
+  .vid-sub .avatar { width:24px;height:24px;font-size:10px; }
+
+  .vid-actions { display:flex; gap:10px; margin-top:14px; }
+  .vid-actions .act { flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; font-size:11px; font-weight:600; color:var(--ink-2); padding:10px; background:#fff; border:1px solid var(--line); border-radius:var(--r-md); }
+  .vid-actions .act .e { font-size:18px; }
+
+  .vid-tabs { display:flex; gap:22px; margin: 22px 0 6px; border-bottom:1px solid var(--line); }
+  .vid-tabs a { font-size:14px; font-weight:700; color:var(--muted); padding-bottom:11px; position:relative; }
+  .vid-tabs a.on { color:var(--ink); }
+  .vid-tabs a.on::after { content:''; position:absolute; bottom:-1px; left:0; right:0; height:3px; background:var(--primary); border-radius:99px; }
+
+  .up-next li { display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px solid var(--line); }
+  .up-next li .thumb { width:72px;height:48px;border-radius:10px; background:linear-gradient(135deg,#5B5BF5,#8E8EFF); display:flex;align-items:center;justify-content:center; font-size:18px; flex-shrink:0; }
+  .up-next li .t { font-size:13px; font-weight:700; line-height:1.3; }
+  .up-next li .d { font-size:11px; color:var(--muted); margin-top:3px; }
+  .up-next li .dur { margin-left:auto; font-size:11px; color:var(--muted); font-weight:600; }
+  .up-next li.now .thumb { background:linear-gradient(135deg,#FF8A5C,#FFB199); }
+  .up-next li.now .t { color:var(--primary); }
+
+  .vid-note { background:var(--accent-soft); border-radius:var(--r-md); padding:14px 15px; margin-top:14px; }
+  .vid-note h5 { font-size:13px; font-weight:800; color:var(--ink); display:flex; align-items:center; gap:7px; }
+  .vid-note p { font-size:12.5px; color:var(--ink-2); margin-top:6px; line-height:1.5; }
+
+  .vid-bottom { position:absolute; bottom:0; left:0; right:0; background:#fff; border-top:1px solid var(--line); padding:14px 20px 22px; display:flex; gap:12px; z-index:30; }
+  .vid-bottom .prev { width:50px; display:flex; align-items:center; justify-content:center; border:1px solid var(--line); border-radius:14px; font-size:18px; }
+  .vid-bottom .next { flex:1; }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="stage">
+  <div class="proto-meta">
+    <div class="brand"><span class="dot"></span> LearnSphere Prototype</div>
+    <div class="screen-tag">Screen 4 / 6 — Video Lesson Player</div>
+    <div class="hint">Tap “Next lesson” → or dashboard</div>
+  </div>
+
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="screen">
+      <div class="statusbar" style="color:#fff;"><span>9:41</span>
+        <div class="right" style="color:#fff;"><div class="bars"><span style="background:#fff;"></span><span style="background:#fff;"></span><span style="background:#fff;"></span><span style="background:#fff;"></span></div><span>📶</span><span>🔋</span></div>
+      </div>
+
+      <div class="app-body" style="padding-bottom:84px;">
+        <!-- Video -->
+        <div class="vid-stage">
+          <div class="vid-topnav">
+            <a href="course-detail.html">‹</a>
+            <a href="dashboard.html">✕</a>
+          </div>
+          <a class="play" href="lesson.html">▶</a>
+          <div class="vid-controls">
+            <div class="timeline"><i></i></div>
+            <div class="time"><span>4:12 / 11:05</span><span>1.5x · HD</span></div>
+            <div class="btns"><span>⏪</span><span>⏩</span><span>🔊</span><span>⛶</span></div>
+          </div>
+        </div>
+
+        <div class="vid-body">
+          <div class="vid-title">Lesson 4 · Building Your First Clickable Prototype</div>
+          <div class="vid-sub">
+            <div class="avatar">SK</div> Sara Khan · Module 4
+            <span style="margin-left:auto;color:var(--primary);font-weight:700;">📋 Resources</span>
+          </div>
+
+          <div class="vid-actions">
+            <a class="act" href="lesson.html"><span class="e">👍</span> Helpful</a>
+            <a class="act" href="lesson.html"><span class="e">📝</span> Notes</a>
+            <a class="act" href="lesson.html"><span class="e">💬</span> Discuss</a>
+            <a class="act" href="lesson.html"><span class="e">⬇️</span> Save</a>
+          </div>
+
+          <div class="vid-note">
+            <h5>💡 Pro tip</h5>
+            <p>Use Figma’s “Smart Animate” on matching layers to create smooth transitions between frames — name your layers identically for the magic to work.</p>
+          </div>
+
+          <div class="vid-tabs">
+            <a class="on">Up Next</a><a>Comments</a><a>Transcript</a>
+          </div>
+
+          <ul class="up-next">
+            <li class="now">
+              <span class="thumb">▶</span>
+              <div><div class="t">Building Your First Clickable Prototype</div><div class="d">Now playing · 11:05</div></div>
+            </li>
+            <li>
+              <span class="thumb">🎨</span>
+              <div><div class="t">Adding transitions & micro-interactions</div><div class="d">Lesson 5 · 9:48</div></div>
+              <span class="dur">9:48</span>
+            </li>
+            <li>
+              <span class="thumb">⚙️</span>
+              <div><div class="t">Component variants in depth</div><div class="d">Lesson 6 · 14:22</div></div>
+              <span class="dur">14:22</span>
+            </li>
+            <li>
+              <span class="thumb">📦</span>
+              <div><div class="t">Developer handoff checklist</div><div class="d">Lesson 7 · 7:30</div></div>
+              <span class="dur">7:30</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="vid-bottom">
+        <a class="prev" href="course-detail.html">‹</a>
+        <a class="btn btn-primary next" href="dashboard.html">Mark Complete & Next →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen-nav">
+    <h4>Prototype screens — click to navigate</h4>
+    <div class="links">
+      <a href="index.html">1 · Onboarding</a>
+      <a href="home.html">2 · Home / Discovery</a>
+      <a href="course-detail.html">3 · Course Detail</a>
+      <a class="current" href="lesson.html">4 · Video Lesson</a>
+      <a href="dashboard.html">5 · My Learning</a>
+      <a href="profile.html">6 · Profile</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
